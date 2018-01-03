@@ -49,4 +49,28 @@ class TeacherController extends Controller
             $teacher->subjects()->attach($request->input('subject'));
             return redirect('/admin/teacher/create');
     }
+    public function edit($id)
+    {
+        $t = Teacher::findOrFail($id);
+        $sub = Subject::where('active',1)->pluck('name','id');
+        return view('admin.teacher.edit',compact('t','sub'));
+    }
+    public function updateTeacher(Request $request,$id)
+    {
+        $t = Teacher::findOrFail($id);
+        $t->name = $request->input('name');
+        $t->name = $request->input('name');
+        $t->gender = $request->input('gender');
+        $t->education = $request->input('education');
+        $t->phoneNum = $request->input('phoneNum');
+        $t->address = $request->input('address');
+        $t->email = $request->input('email');
+        $t->salaryPerHour = $request->input('salaryPerHour');
+        $t->salaryPerMonth = $request->input('salaryPerMonth');
+        $t->user_id = Auth::user()->id;
+        $t->save();
+        $t->subjects()->detach();
+        $t->subjects()->attach($request->input('subject'));
+        return redirect('/admin/teacher/create');
+    }
 }

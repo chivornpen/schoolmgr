@@ -138,22 +138,31 @@
                             <li><a href="{{URL::to('/admin/year/create')}}">&nbsp;&nbsp;&nbsp;&nbsp; Add Year</a></li><li class="treeview">
                         </ul>
                     </li>
+                {{--Menu Classroom--}}
+                <li class="treeview"><a href="#"><i class="fa fa-building fa-fw"></i> Classroom <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{URL::to('/admin/classroom/create')}}">&nbsp;&nbsp;&nbsp;&nbsp; Add Classroom</a></li><li class="treeview">
+                    </ul>
+                </li>
                 {{--Menu Turn--}}
                 <li class="treeview"><a href="#"><i class="fa fa-calendar-times-o fa-fw"></i> Session <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                     <ul class="treeview-menu">
                         <li><a href="{{URL::to('/admin/session/create')}}">&nbsp;&nbsp;&nbsp;&nbsp; Add Session</a></li><li class="treeview">
                     </ul>
                 </li>
+                {{--Menu Generation--}}
                 <li class="treeview"><a href="#"><i class="fa fa-google fa-fw"></i> Generation <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                     <ul class="treeview-menu">
                         <li><a href="{{URL::to('/admin/generation/create')}}">&nbsp;&nbsp;&nbsp;&nbsp; Add Generation</a></li><li class="treeview">
                     </ul>
                 </li>
+                {{--Menu Student--}}
                 <li class="treeview"><a href="#"><i class="fa fa-mortar-board fa-fw"></i> Students <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                     <ul class="treeview-menu">
                         <li><a href="{{URL::to('/admin/student/create')}}">&nbsp;&nbsp;&nbsp;&nbsp; Add Student</a></li><li class="treeview">
                     </ul>
                 </li>
+                {{--Menu Teacher--}}
                 <li class="treeview"><a href="#"><i class="fa fa-user-md fa-fw"></i> Teachers <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                     <ul class="treeview-menu">
                         <li><a href="{{URL::to('/admin/teacher/create')}}">&nbsp;&nbsp;&nbsp;&nbsp; Add Teacher</a></li><li class="treeview">
