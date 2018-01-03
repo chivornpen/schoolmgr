@@ -181,30 +181,18 @@
     <!-- Bootstrap 3.3.7 -->
     <script src="{{asset('bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
     <!-- DataTables -->
-    <script src="{{asset('bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+
 
 
 
     <script src="{{ asset('js/app.js') }}"></script>
-
-    <script>
-//        $(function () {
-//            $('#example1').DataTable()
-//            $('#example2').DataTable({
-//                'paging'      : true,
-//                'lengthChange': false,
-//                'searching'   : false,
-//                'ordering'    : true,
-//                'info'        : true,
-//                'autoWidth'   : false
-//            })
-//        })
-    </script>
     @yield('script')
     {{--datetimepicker--}}
     <script src="{{asset('js/bootstrap-datetimepicker.js')}}"></script>
     {{--  select2  --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="{{asset('bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+
 </body>
 </html>

@@ -183,6 +183,7 @@
 @section('script')
 
     <script type="text/javascript">
+
         function getTableStudent() {
             $.ajax({
                 type: 'get',
