@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="panel panel-default">
             <div class="panel-heading">
-                Create Classroom
+                Create Teacher
             </div>
             <div class="panel-body">
                 <div class="row">
@@ -15,7 +15,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    {!! Form::label('Classroom Name')!!}
+                                    {!! Form::label('Teacher Name')!!}
                                     {!! Form::text('name',null,['class'=>'edit-form-control','placeholder'=>'Teacher Name'])!!}
                                     @if($errors->has('name'))
                                         <span class="text-danger">
@@ -155,9 +155,9 @@
                                             @endforeach
                                         </td>
                                         <td class="center">
-                                            <a href="#" onclick="updateTeacher('{{$t->id}}')" class="btn btn-warning btn-xs" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-edit"></i></a>
-                                            <a href="#" onclick="deleteTeacher({{$t->id}})" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>
-                                            <a href="#" onclick="viewTeacher({{$t->id}})" class="btn btn-info btn-xs"><i class="fa fa-eye"></i></a>
+                                            <a href="#" onclick="updateTeacher('{{$t->id}}')" style="padding: 5px;" title="Edit" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-edit" style="color:#F8BC02;"></i></a>
+                                            <a href="#" onclick="deleteTeacher({{$t->id}})" style="padding: 5px;" title="Delete"><i class="fa fa-trash" style="color: red;"></i></a>
+                                            <a href="#" onclick="viewTeacher({{$t->id}})" style="padding: 5px;" title="View"><i class="fa fa-eye" style="color:#03CBEA;"></i></a>
 
                                         </td>
                                     </tr>

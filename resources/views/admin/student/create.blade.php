@@ -56,7 +56,7 @@
                                 @endif
                             </div>
                             <div class="col-lg-3">
-                                {!! Form::label('email','&nbsp;Email (If not have no need)',['class'=>'edit-label']) !!}
+                                {!! Form::label('email','&nbsp;Email',['class'=>'edit-label']) !!}
                                 {!! Form::email('email',null,['class'=>'edit-form-control','placeholder'=>'test@example.com']) !!}
                                 @if($errors->has('email'))
                                     <span class="text-danger">{{$errors->first('email')}}</span>

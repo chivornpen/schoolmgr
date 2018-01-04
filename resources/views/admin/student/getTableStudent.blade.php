@@ -32,9 +32,9 @@
                 <td style="line-height: 50px" class="center">
 
 
-                    <a href="#" onclick='editStudent("{{$stu->id}}")' style="padding: 5px;" data-toggle="modal" data-target="#myModal" title="edit"><i class="fa fa-edit"></i></a>
-                    <a href="#" style="padding: 5px;" onclick='deleteStudent("{{$stu->id}}")'><i class="fa fa-trash" style="color: red;" title="Delete User"></i></a>
-                    <a href="{{url('admin/student/view',$stu->id)}}" style="padding: 5px;"><i class="fa fa-eye" title="View User" style=""></i></a>
+                    <a href="#" onclick='editStudent("{{$stu->id}}")' style="padding: 5px;" data-toggle="modal" data-target="#myModal" title="Edit"><i class="fa fa-edit" style="color: #F8BC02;"></i></a>
+                    <a href="#" style="padding: 5px;" onclick='deleteStudent("{{$stu->id}}")'><i class="fa fa-trash" style="color: red;" title="Delete"></i></a>
+                    <a href="{{url('admin/student/view',$stu->id)}}" style="padding: 5px;"><i class="fa fa-eye" title="View" style="color: #03CBEA;"></i></a>
 
                 </td>
         </tr>

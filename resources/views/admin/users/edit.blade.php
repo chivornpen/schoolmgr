@@ -3,7 +3,8 @@
     {!! Form::model($user,['action'=>['UserController@update',$user->id],'method'=>'PATCH','files'=>true]) !!}
 
         <!-- Modal content-->
-        <div class="modal-content">
+        <div class="modal-content" style="border-radius: 5px; margin-top: 15%;">
+            <div class="panel panel-default">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Edit User</h4>
@@ -79,7 +80,7 @@
                 {!! Form::submit('Update',['class'=>'btn btn-success btn-sm pull-left' ]) !!}
                 <a href="#" data-dismiss="modal" class="btn btn-default btn-sm pull-left">Close</a>
             </div>
-
+            </div>
         </div>
     {!! Form::close() !!}
 </div>

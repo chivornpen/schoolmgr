@@ -22,7 +22,6 @@
         {!! Form::close() !!}
     </div>
 </div>
-</div>
 <script>
     $('#test').select2();
     $('#test').select2().val({{json_encode($p->modules()->getRelatedIds())}}).trigger('change');

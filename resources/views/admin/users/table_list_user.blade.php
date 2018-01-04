@@ -24,10 +24,10 @@
                 <td style="line-height: 50px" class="center">
 
 
-                    <a href="#" onclick='editUser("{{$u->id}}")' style="padding: 5px;" data-toggle="modal" data-target="#myModal" title="edit"><i class="fa fa-edit"></i></a>
+                    <a href="#" onclick='editUser("{{$u->id}}")' style="padding: 5px;" data-toggle="modal" data-target="#myModal" title="Edit User"><i class="fa fa-edit" style="color: #F8BC02;"></i></a>
                     <a href="#" onclick='resetPassword("{{$u->id}}")' data-toggle="modal" data-target=".bs-example-modal-sm" style="padding: 5px;" title="Rest Password"><i class="fa fa-refresh"></i></a>
                     <a href="#" style="padding: 5px;" onclick='deleteUser("{{$u->id}}")'><i class="fa fa-trash" style="color: red;" title="Delete User"></i></a>
-                    <a href="#" onclick='viewUser("{{$u->id}}")' style="padding: 5px;" data-toggle="modal" data-target="#viewUser" style="padding: 5px;"><i class="fa fa-eye" title="View User" style=""></i></a>
+                    <a href="#" onclick='viewUser("{{$u->id}}")' style="padding: 5px;" data-toggle="modal" data-target="#viewUser" style="padding: 5px;"><i class="fa fa-eye" title="View User" style="color: #03CBEA;"></i></a>
 
                 </td>
         </tr>
