@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="panel panel-default">
             <div class="panel-heading">
-                Create Classroom
+                Add New Teacher
             </div>
             <div class="panel-body">
                 <div class="row">
@@ -15,7 +15,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    {!! Form::label('Classroom Name')!!}
+                                    {!! Form::label('Teacher Name')!!}
                                     {!! Form::text('name',null,['class'=>'edit-form-control','placeholder'=>'Teacher Name'])!!}
                                     @if($errors->has('name'))
                                         <span class="text-danger">

@@ -1,5 +1,5 @@
 <?php
-use Illuminate\Support\Facades\Auth;
+    use Illuminate\Support\Facades\Auth;
     Route::get('/','DefaultController@index');
     Auth::routes();
     
