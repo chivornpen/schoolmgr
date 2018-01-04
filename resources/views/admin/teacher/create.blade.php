@@ -6,6 +6,7 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 Create Teacher
+                Add New Teacher
             </div>
             <div class="panel-body">
                 <div class="row">

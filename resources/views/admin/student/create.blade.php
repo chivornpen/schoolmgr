@@ -94,15 +94,17 @@
                                     <span class="text-danger">{{$errors->first('generation')}}</span>
                                 @endif
                             </div>
-                            <div class="col-lg-6">
-                                {!! Form::label('classroom[]','&nbsp;Classroom',['class'=>'edit-label']) !!}
-                                {!! Form::select('classroom[]',$classroom,null,['class'=>'select2-test edit-form-control', 'required'=>true,'multiple']) !!}
-                                @if($errors->has('classroom[]'))
-                                    <span class="text-danger">{{$errors->first('classroom')}}</span>
-                                @endif
-                            </div>
+
+                                <div class="col-lg-6">
+                                    {!! Form::label('classroom[]','&nbsp;Classroom',['class'=>'edit-label']) !!}
+                                    {!! Form::select('classroom[]',$classroom,null,['class'=>'select2-test edit-form-control', 'required'=>true,'multiple']) !!}
+                                    @if($errors->has('classroom[]'))
+                                        <span class="text-danger">{{$errors->first('classroom')}}</span>
+                                    @endif
+                                </div>
                         </div>
                     </div>
+                    <br>
                     <div class="col-md-2">
                         <div class="row">
                             <div class="col-md-2"></div>
@@ -183,6 +185,7 @@
 @section('script')
 
     <script type="text/javascript">
+
         function getTableStudent() {
             $.ajax({
                 type: 'get',

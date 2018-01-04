@@ -119,7 +119,26 @@
         </header>
         <!-- Left side column. contains the logo and sidebar -->
         <aside class="main-sidebar">
-
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="/photo/{{Auth::user()->photo}}" class="img-circle" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p>{!! Auth::user()->username !!}</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                </div>
+            </div>
+            <!-- search form -->
+            <form action="#" method="get" class="sidebar-form">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </span>
+                </div>
+            </form>
             <!-- sidebar: style can be found in sidebar.less -->
                 {{--  @include('admin.nav.aside')  --}}
                     @php
@@ -181,30 +200,18 @@
     <!-- Bootstrap 3.3.7 -->
     <script src="{{asset('bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
     <!-- DataTables -->
-    <script src="{{asset('bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+
 
 
 
     <script src="{{ asset('js/app.js') }}"></script>
-
-    <script>
-//        $(function () {
-//            $('#example1').DataTable()
-//            $('#example2').DataTable({
-//                'paging'      : true,
-//                'lengthChange': false,
-//                'searching'   : false,
-//                'ordering'    : true,
-//                'info'        : true,
-//                'autoWidth'   : false
-//            })
-//        })
-    </script>
     @yield('script')
     {{--datetimepicker--}}
     <script src="{{asset('js/bootstrap-datetimepicker.js')}}"></script>
     {{--  select2  --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="{{asset('bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+
 </body>
 </html>

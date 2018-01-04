@@ -1,5 +1,5 @@
 <?php
-use Illuminate\Support\Facades\Auth;
+    use Illuminate\Support\Facades\Auth;
     Route::get('/','DefaultController@index');
     Auth::routes();
     
@@ -103,7 +103,11 @@ use Illuminate\Support\Facades\Auth;
         Route::get('/admin/teacher/create','TeacherController@create');
         Route::post('/admin/teacher/stored','TeacherController@stored');
 
-        
+        Route::get('/admin/teacher/view/{id}','TeacherController@view');
+        Route::get('/admin/teacher/edit/{id}','TeacherController@edit');
+        Route::patch('/admin/teacher/update/{id}','TeacherController@updateTeacher');
+        Route::get('/admin/teacher/delete/{id}','TeacherController@deleteTeacher');
+
 
     });
 
@@ -133,4 +137,4 @@ use Illuminate\Support\Facades\Auth;
 
 
 
-//Route::get('/home', 'HomeController@index')->name
+//Route::get('/home', 'HomeController@index')->name('home');

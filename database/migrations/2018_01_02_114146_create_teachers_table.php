@@ -21,8 +21,8 @@ class CreateTeachersTable extends Migration
             $table->string('phoneNum',50);
             $table->string('email')->nullable()->unique();
             $table->string('education');
-            $table->double('salaryPerMonth')->nullable();
-            $table->double('salaryPerHour')->nullable();
+            $table->double('salaryPerMonth')->nullable()->default(0);
+            $table->double('salaryPerHour')->nullable()->default(0);
             $table->integer('user_id');
             $table->integer('authorize_id')->nullable();
             $table->date('authorize_date')->nullable();
