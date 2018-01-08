@@ -2,7 +2,7 @@
 {!! Form::model($t,['action'=>['TeacherController@updateTeacher',$t->id],'method'=>'PATCH','files'=>true]) !!}
 
 <!-- Modal content-->
-    <div class="modal-content">
+    <div class="modal-content" style="border-radius: 5px; margin-top: 15%;">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">Edit Teacher</h4>
@@ -54,7 +54,7 @@
                             </div>
                             <div class="col-lg-2">
                                 {!! Form::label('salaryPerMonth','&nbsp;Salary/Month',['class'=>'edit-label']) !!}
-                                {!! Form::text('salaryPerMonth',null,['class'=>'edit-form-control','placeholder'=>'Salary Per Month', 'required'=>true ]) !!}
+                                {!! Form::text('salaryPerMonth',null,['class'=>'edit-form-control']) !!}
                                 @if($errors->has('salaryPerMonth'))
                                     <span class="text-danger">{{$errors->first('salaryPerMonth')}}</span>
                                 @endif
@@ -62,7 +62,7 @@
                             </div>
                             <div class="col-lg-2">
                                 {!! Form::label('salaryPerHour','&nbsp;Salary/Hour',['class'=>'edit-label']) !!}
-                                {!! Form::text('salaryPerHour',null,['class'=>'edit-form-control','placeholder'=>'Salary Per Hour', 'required'=>true ]) !!}
+                                {!! Form::text('salaryPerHour',null,['class'=>'edit-form-control']) !!}
                                 @if($errors->has('salaryPerHour'))
                                     <span class="text-danger">{{$errors->first('salaryPerHour')}}</span>
                                 @endif

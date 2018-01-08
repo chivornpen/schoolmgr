@@ -66,8 +66,8 @@
                                         <td>{{$s->description}}</td>
                                         <td>{{\App\User::where('id',$s->user_id)->value('name')}}</td>
                                         <td class="center">
-                                            <a href="#" onclick="updateSubject('{{$s->id}}')" class="btn btn-warning btn-xs" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-edit"></i></a>
-                                            <a href="#" onclick="deleteSubject({{$s->id}})" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></a>
+                                            <a href="#" onclick="updateSubject('{{$s->id}}')" style="padding: 5px;" title="Edit" data-toggle="modal" data-target=".bs-example-modal-sm"><i class="fa fa-edit" style="color:#F8BC02;"></i></a>
+                                            <a href="#" onclick="deleteSubject({{$s->id}})" style="padding: 5px;" title="Delete"><i class="fa fa-trash" style="color: red;"></i></a>
 
                                         </td>
                                     </tr>

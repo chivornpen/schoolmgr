@@ -3,10 +3,10 @@
 {!! Form::model($st,['action'=>['StudentController@update',$st->id],'method'=>'PATCH','files'=>true]) !!}
 
 <!-- Modal content-->
-    <div class="modal-content">
+    <div class="modal-content" style="border-radius: 5px; margin-top: 15%;">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Edit User</h4>
+            <h4 class="modal-title">Edit Student</h4>
         </div>
         <div class="modal-body">
             <div >

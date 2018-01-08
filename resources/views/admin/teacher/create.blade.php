@@ -129,7 +129,7 @@
                     <div class="col-md-12">
                         <label for="">List views</label>
                         <div class="form-group">
-                            <table id="example1" class="table table-bordered table-striped">
+                            <table id="teacherList" class="table table-bordered table-striped">
                                 <thead>
                                 <tr>
                                     <th>No</th>
@@ -185,6 +185,9 @@
 @endsection
 @section('script')
     <script type="text/javascript">
+        $(function () {
+            $('#teacherList').DataTable();
+        })
         $(document).ready(function (){
            $('.select2-test').select2();
         });
