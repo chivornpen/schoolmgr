@@ -1,10 +1,4 @@
-<section class="sidebar" xmlns="http://www.w3.org/1999/html">
 
-    <!-- sidebar menu: : style can be found in sidebar.less -->
-    <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN NAVIGATION</li>
-
-        {{--Menu Admininstrator--}}
         <li class="treeview"><a href="#"><i class="fa fa-building"></i> <span>School Manager</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
             <ul class="treeview-menu">
                 {{--Menu year--}}
@@ -53,5 +47,3 @@
             </ul>
         </li>
         {{--End menu School mgr--}}
-    </ul>
-</section>

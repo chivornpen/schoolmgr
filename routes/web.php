@@ -8,11 +8,12 @@
         //creat module and put it in session
         Route::get('/admin',function(){
             $po= Auth::user()->position;
+            $test=[];
             foreach ($po->modules as $mo) {
-                 $test=$mo->nav;
-            }    
-            $collection = collect($test);
-            $collection1 = $collection->unique('module');
+                 $test[]=$mo->nav;
+            }
+            $collection1 = collect($test);
+            //$collection1 = $collection->unique('module');
             Session::put('collection1',$collection1);
             return redirect('/admin/home');
         });
@@ -110,31 +111,3 @@
 
 
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Route::get('/home', 'HomeController@index')->name('home');

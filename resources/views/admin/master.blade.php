@@ -141,16 +141,20 @@
             </form>
             <!-- sidebar: style can be found in sidebar.less -->
                 {{--  @include('admin.nav.aside')  --}}
-                    @php
-                        $collection1 = Session::get('collection1');
-                    @endphp
-                    @foreach($collection1 as $menu)
-                        @include($menu)
-                    @endforeach
-                     
-            <!-- /.sidebar -->
+            <section class="sidebar" xmlns="http://www.w3.org/1999/html">
+                <ul class="sidebar-menu" data-widget="tree"><li class="header">MAIN NAVIGATION</li>
+                        @php
+                            $collection1 = Session::get('collection1');
 
+                        //dd($collection1);
+                        @endphp
+                        @foreach($collection1 as $menu)
+                            @include($menu)
+                        @endforeach
 
+                <!-- /.sidebar -->
+                </ul>
+            </section>
         </aside>
 
         <div class="content-wrapper">
