@@ -63,17 +63,48 @@
                                 @endif
                             </div>
                             <div class="col-lg-3">
-                                {!! Form::label('perantNum','&nbsp;Parent Number',['class'=>'edit-label']) !!}
-                                {!! Form::text('perantNum',null,['class'=>'edit-form-control','placeholder'=>'Parent Number', 'required'=>true ]) !!}
+                                {!! Form::label('perantNum','&nbsp;Reference Number',['class'=>'edit-label']) !!}
+                                {!! Form::text('perantNum',null,['class'=>'edit-form-control','placeholder'=>'Reference Number', 'required'=>true ]) !!}
                                 @if($errors->has('perantNum'))
                                     <span class="text-danger">{{$errors->first('perantNum')}}</span>
                                 @endif
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-lg-3">
+                                {!! Form::label('faname','Father Name') !!}
+                                {!! Form::text('faname',null,['class'=>'edit-form-control','placeholder'=>'Father name', 'required'=>true ]) !!}
+                                @if($errors->has('faname'))
+                                    <span class="text-danger">{{$errors->first('faname')}}</span>
+                                @endif
+                            </div>
+                            <div class="col-lg-3">
+                                {!! Form::label('occufa','Occupation Father') !!}
+                                {!! Form::text('occufa',null,['class'=>'edit-form-control','placeholder'=>'Occupation Father', 'required'=>true ]) !!}
+                                @if($errors->has('occufa'))
+                                    <span class="text-danger">{{$errors->first('occufa')}}</span>
+                                @endif
+                            </div>
+                            <div class="col-lg-3">
+                                {!! Form::label('maname','Mather Name') !!}
+                                {!! Form::text('maname',null,['class'=>'edit-form-control','placeholder'=>'Mother name', 'required'=>true ]) !!}
+                                @if($errors->has('maname'))
+                                    <span class="text-danger">{{$errors->first('maname')}}</span>
+                                @endif
+                            </div>
+                            <div class="col-lg-3">
+                                {!! Form::label('occuma','Occupation Mother') !!}
+                                {!! Form::text('occuma',null,['class'=>'edit-form-control','placeholder'=>'Occupation Mather', 'required'=>true ]) !!}
+                                @if($errors->has('occuma'))
+                                    <span class="text-danger">{{$errors->first('occuma')}}</span>
+                                @endif
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-lg-6">
-                                {!! Form::label('lob','&nbsp;Location Of Birth',['class'=>'edit-label']) !!}
-                                {!! Form::textArea('lob',null,['class'=>'edit-form-control','placeholder'=>'Location of Birth', 'required'=>true,'rows'=>2]) !!}
+                                {!! Form::label('lob','&nbsp;Place Of Birth',['class'=>'edit-label']) !!}
+                                {!! Form::textArea('lob',null,['class'=>'edit-form-control','placeholder'=>'Place of Birth', 'required'=>true,'rows'=>2]) !!}
                                 @if($errors->has('lob'))
                                     <span class="text-danger">{{$errors->first('email')}}</span>
                                 @endif
@@ -96,7 +127,7 @@
                             </div>
 
                                 <div class="col-lg-6">
-                                    {!! Form::label('classroom[]','&nbsp;Classroom',['class'=>'edit-label']) !!}
+                                    {!! Form::label('classroom[]','&nbsp;Class',['class'=>'edit-label']) !!}
                                     {!! Form::select('classroom[]',$classroom,null,['class'=>'select2-test edit-form-control', 'required'=>true,'multiple']) !!}
                                     @if($errors->has('classroom[]'))
                                         <span class="text-danger">{{$errors->first('classroom')}}</span>

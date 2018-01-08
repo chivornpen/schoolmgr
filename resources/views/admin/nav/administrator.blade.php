@@ -8,9 +8,9 @@
                         </ul>
                     </li>
                 {{--Menu Classroom--}}
-                <li class="treeview"><a href="#"><i class="fa fa-building fa-fw"></i> Classroom <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                <li class="treeview"><a href="#"><i class="fa fa-building fa-fw"></i> Class <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
                     <ul class="treeview-menu">
-                        <li><a href="{{URL::to('/admin/classroom/create')}}">&nbsp;&nbsp;&nbsp;&nbsp; Add Classroom</a></li><li class="treeview">
+                        <li><a href="{{URL::to('/admin/classroom/create')}}">&nbsp;&nbsp;&nbsp;&nbsp; Add Class</a></li><li class="treeview">
                     </ul>
                 </li>
                 {{--Menu Turn--}}

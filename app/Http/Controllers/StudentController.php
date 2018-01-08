@@ -28,6 +28,10 @@ class StudentController extends Controller
             'dob'           =>'required',
             'phoneNum'      =>'required|min:9',
             'perantNum'     =>'required|min:9',
+            'faname'        =>'required',
+            'occufa'        =>'required',
+            'maname'        =>'required',
+            'occuma'        =>'required',
             'lob'           =>'required',
             'address'       =>'required',
             'generation'    =>'required',
@@ -37,6 +41,10 @@ class StudentController extends Controller
             'khName.required'        =>'field Khmer Name required',
             'enName.required'        =>'field English Name required',
             'gender.required'        =>'please choose one gender',
+            'faname.required'        =>'field father name required',
+            'occufa.required'        =>'field occupation required',
+            'maname.required'        =>'field mother name required',
+            'occuma.required'        =>'field occupation required',
             'dob.required'           =>'field date of birth required',
             'phoneNum.required'      =>'field phone number required',
             'perantNum.required'     =>'field parent number required',
@@ -55,14 +63,20 @@ class StudentController extends Controller
         }
 
         $student = new Student();
-        $student->khName        = $request->input('khName');
-        $student->enName        = $request->input('enName');
+        $student->khName        = trim($request->input('khName'));
+        $student->enName        = trim($request->input('enName'));
         $student->gender        = $request->input('gender');
         $student->dob           = $request->input('dob');
         $student->ssid          = $request->input('ssid');
         $student->phoneNum      = $request->input('phoneNum');
-        $student->email         = $request->input('email');
+        $student->email         = trim($request->input('email'));
         $student->perantNum     = $request->input('perantNum');
+//        faName	occufa	maName	occuma
+        $student->faName        =trim($request->input('faname'));
+        $student->occufa        =trim($request->input('occufa'));
+        $student->maName        =trim($request->input('maname'));
+        $student->occuma        =trim($request->input('occuma'));
+
         $student->lob           = $request->input('lob');
         $student->address       = $request->input('address');
         $student->photo         = $name;

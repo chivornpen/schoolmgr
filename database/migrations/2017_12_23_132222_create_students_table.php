@@ -27,6 +27,12 @@ class CreateStudentsTable extends Migration
             $table->string('perantNum')->nullable();
             $table->string('photo')->nullable();
             $table->integer('generation_id');
+
+            $table->string('faName',150);
+            $table->string('occufa');
+            $table->string('maName',150);
+            $table->string('occuma');
+
             $table->integer('user_id');
             $table->integer('authorize_id')->nullable();
             $table->date('authorize_date')->nullable();
